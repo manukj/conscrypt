@@ -377,13 +377,6 @@ public final class OpenSSLProvider extends Provider {
          * than 64 bits. We solve this confusion by making PKCS7Padding an
          * alias for PKCS5Padding.
          */
-        putSymmetricCipherImplClass("AES/ECB/NoPadding",
-                "OpenSSLEvpCipherAES$AES$ECB$NoPadding");
-        putSymmetricCipherImplClass("AES/ECB/PKCS5Padding",
-                "OpenSSLEvpCipherAES$AES$ECB$PKCS5Padding");
-        put("Alg.Alias.Cipher.AES/ECB/PKCS7Padding", "AES/ECB/PKCS5Padding");
-        putSymmetricCipherImplClass("AES/CBC/NoPadding",
-                "OpenSSLEvpCipherAES$AES$CBC$NoPadding");
         putSymmetricCipherImplClass("AES/CBC/PKCS5Padding",
                 "OpenSSLEvpCipherAES$AES$CBC$PKCS5Padding");
         put("Alg.Alias.Cipher.AES/CBC/PKCS7Padding", "AES/CBC/PKCS5Padding");
